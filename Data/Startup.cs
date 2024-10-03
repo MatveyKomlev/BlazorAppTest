@@ -7,7 +7,7 @@
     {
         internal void ConfigureServices(IServiceCollection services)
         {
-            string config = "Server=(local);Database=YourDatabaseName;Trusted_Connection=True;MultipleActiveResultSets=true;Integrated Security=true;";
+            string config = "Server=localhost;Port=5432;Database=ИмяБазыДанных;Username=ЛогинУчетнойЗаписи;Password=ПарольУчетнойЗаписи;Integrated Security=true;Pooling=true;Include Error Detail=true";
             services.AddDbContextFactory<PurchaseContext>(options => options.UseSqlServer(config, option => option.CommandTimeout(60)).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTrackingWithIdentityResolution));
 
 
