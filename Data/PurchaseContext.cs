@@ -13,5 +13,6 @@ namespace BlazorAppTest.src
         public PurchaseContext(DbContextOptions<PurchaseContext> options) : base(options)
         { }
 
+
     }
 }

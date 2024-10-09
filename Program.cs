@@ -20,6 +20,9 @@ namespace BlazorAppTest
             startup.ConfigureServices(builder.Services);
 
             app.Run();
+
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
         }
     }
 }
